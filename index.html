@@ -1198,7 +1198,7 @@
                   <div class="copyright-area-inner">
                     <div class="copyright-text">
                       <p class="text">
-                        © Copyright 2024, All Rights Reserved by
+                        © Copyright <span id="current-year"></span>, All Rights Reserved by
                         <a href="index.html">Bakara</a> Digital Agency Studio
                       </p>
                     </div>
@@ -1230,5 +1230,15 @@
     <script src="assets/js/image-reveal-hover.js"></script>
     <script src="assets/js/magiccursor.js"></script>
     <script src="assets/js/all.js"></script>
+
+    <!-- Dynamic Copyright Year Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const currentYearElement = document.getElementById('current-year');
+        if (currentYearElement) {
+          currentYearElement.textContent = new Date().getFullYear();
+        }
+      });
+    </script>
   </body>
 </html>
